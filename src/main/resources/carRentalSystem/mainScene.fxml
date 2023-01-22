@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="520.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="carRentalSystem.MainSceneController">
+    <left>
+        <AnchorPane prefHeight="407.0" prefWidth="228.0" style="-fx-background-color: #363636;" BorderPane.alignment="CENTER">
+            <children>
+                <Label alignment="CENTER" layoutX="61.0" layoutY="14.0" prefHeight="69.0" prefWidth="104.0" text="Panel" textAlignment="CENTER">
+                    <font>
+                        <Font name="Verdana Bold" size="24.0" />
+                    </font>
+                    <effect>
+                        <DropShadow />
+                    </effect>
+                    <textFill>
+                        <LinearGradient endX="1.0" endY="1.0">
+                            <stops>
+                                <Stop>
+                                    <color>
+                                        <Color red="1.0" green="1.0" blue="1.0" />
+                                    </color>
+                                </Stop>
+                                <Stop offset="1.0">
+                                    <color>
+                                        <Color red="1.0" green="1.0" blue="1.0" />
+                                    </color>
+                                </Stop>
+                            </stops>
+                        </LinearGradient>
+                    </textFill>
+                </Label>
+                <Line endX="100.0" layoutX="113.0" layoutY="135.0" startX="-100.0">
+                    <stroke>
+                        <LinearGradient endX="1.0" endY="1.0" startX="0.2796208530805687" startY="0.4881516587677725">
+                            <stops>
+                                <Stop>
+                                    <color>
+                                        <Color red="1.0" green="0.8368827104568481" blue="0.30092594027519226" />
+                                    </color>
+                                </Stop>
+                                <Stop offset="1.0">
+                                    <color>
+                                        <Color red="1.0" green="1.0" blue="1.0" />
+                                    </color>
+                                </Stop>
+                            </stops>
+                        </LinearGradient>
+                    </stroke>
+                </Line>
+                <Line endX="100.0" layoutX="114.0" layoutY="204.0" startX="-100.0">
+                    <stroke>
+                        <LinearGradient endX="1.0" endY="1.0" startX="0.2796208530805687" startY="0.4881516587677725">
+                            <stops>
+                                <Stop>
+                                    <color>
+                                        <Color red="1.0" green="0.8368827104568481" blue="0.30092594027519226" />
+                                    </color>
+                                </Stop>
+                                <Stop offset="1.0">
+                                    <color>
+                                        <Color red="1.0" green="1.0" blue="1.0" />
+                                    </color>
+                                </Stop>
+                            </stops>
+                        </LinearGradient>
+                    </stroke>
+                </Line>
+            <Button fx:id="costumersButton" layoutX="67.0" layoutY="155.0" mnemonicParsing="false" onAction="#costumersButtonOnAction" style="-fx-background-color: #363636;" text="Klienci" textFill="WHITE">
+               <font>
+                  <Font name="Verdana Bold" size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="carsButton" layoutX="44.0" layoutY="83.0" mnemonicParsing="false" onAction="#carsButtonOnAction" style="-fx-background-color: #363636;" text="Samochody" textFill="WHITE">
+               <font>
+                  <Font name="Verdana Bold" size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="cancelButton" layoutX="60.0" layoutY="298.0" mnemonicParsing="false" onAction="#cancelButtonOnAction" style="-fx-background-color: #363636;" text="Zamknij" textFill="WHITE">
+               <font>
+                  <Font name="Verdana Bold" size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="rentButton" layoutX="51.0" layoutY="225.0" mnemonicParsing="false" onAction="#rentButtonOnAction" style="-fx-background-color: #363636;" text="Wypożycz" textFill="WHITE">
+               <font>
+                  <Font name="Verdana Bold" size="18.0" />
+               </font>
+            </Button>
+            <Line endX="100.0" layoutX="114.0" layoutY="278.0" startX="-100.0">
+               <stroke>
+                  <LinearGradient endX="1.0" endY="1.0" startX="0.2796208530805687" startY="0.4881516587677725">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color red="1.0" green="0.8368827104568481" blue="0.30092594027519226" />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color red="1.0" green="1.0" blue="1.0" />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </LinearGradient>
+               </stroke>
+            </Line>
+            </children>
+        </AnchorPane>
+    </left>
+    <right>
+        <AnchorPane prefHeight="400.0" prefWidth="332.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label alignment="CENTER" layoutX="63.0" layoutY="14.0" prefHeight="69.0" prefWidth="166.0" text="ZSW" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="Verdana Bold" size="24.0" />
+               </font>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </Label>
+            <Label fx:id="loginMessageLabel" alignment="CENTER" layoutX="52.0" layoutY="119.0" prefHeight="25.0" prefWidth="193.0" textAlignment="CENTER" textFill="RED">
+               <font>
+                  <Font name="Verdana Bold" size="12.0" />
+               </font>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </Label>
+            <ImageView fitHeight="188.0" fitWidth="197.0" layoutX="52.0" layoutY="106.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="file:/C:/Users/Maks/Desktop/carRentalSystem/Others/BMWpng.parspng.com-3.png" />
+               </image>
+            </ImageView>
+         </children></AnchorPane>
+    </right>
+</BorderPane>

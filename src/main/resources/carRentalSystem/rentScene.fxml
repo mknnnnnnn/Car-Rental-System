@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="550.0" prefWidth="700.0" style="-fx-background-color: #363636;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="carRentalSystem.RentSceneController">
+   <children>
+      <AnchorPane prefHeight="550.0" prefWidth="200.0" style="-fx-background-color: #363636;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Label alignment="CENTER" layoutX="49.0" layoutY="14.0" prefHeight="69.0" prefWidth="104.0" text="Panel" textAlignment="CENTER">
+               <font>
+                  <Font name="Verdana Bold" size="24.0" />
+               </font>
+               <effect>
+                  <DropShadow />
+               </effect>
+               <textFill>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color red="1.0" green="1.0" blue="1.0" />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color red="1.0" green="1.0" blue="1.0" />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </LinearGradient>
+               </textFill>
+            </Label>
+            <Button layoutX="41.0" layoutY="467.0" mnemonicParsing="false" onAction="#rent" style="-fx-background-color: #363636;" text="Wypożycz" textFill="WHITE">
+               <font>
+                  <Font name="Verdana Bold" size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="cancelButton" layoutX="50.0" layoutY="502.0" mnemonicParsing="false" onAction="#cancelButtonOnAction" style="-fx-background-color: #363636;" text="Zamknij" textFill="WHITE">
+               <font>
+                  <Font name="Verdana Bold" size="18.0" />
+               </font>
+            </Button>
+            <TextField fx:id="idCarTextField" alignment="CENTER" layoutX="25.0" layoutY="83.0" promptText=" ID Auta" />
+            <TextField fx:id="idCustomerTextField" alignment="CENTER" layoutX="25.0" layoutY="116.0" promptText="ID Klienta" />
+            <Line endX="100.0" layoutX="70.0" layoutY="502.0" startX="-40.5">
+               <stroke>
+                  <LinearGradient endX="1.0" endY="1.0" startX="0.2796208530805687" startY="0.4881516587677725">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color red="1.0" green="0.8368827104568481" blue="0.30092594027519226" />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color red="1.0" green="1.0" blue="1.0" />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </LinearGradient>
+               </stroke>
+            </Line>
+         </children>
+      </AnchorPane>
+      <TableView fx:id="tableCars" layoutX="200.0" layoutY="83.0" onMouseClicked="#getSelectedCar" prefHeight="225.0" prefWidth="500.0">
+        <columns>
+          <TableColumn fx:id="tableColumnCarID" prefWidth="70.0" text="ID" />
+          <TableColumn fx:id="tableColumnSeries" prefWidth="70.0" text="Seria" />
+            <TableColumn fx:id="tableColumnModel" prefWidth="70.0" text="Model" />
+            <TableColumn fx:id="tableColumnClass" prefWidth="70.0" text="Klasa" />
+            <TableColumn fx:id="tableColumnColor" prefWidth="70.0" text="Kolor" />
+            <TableColumn fx:id="tableColumnRented" prefWidth="150.0" text="Wypożyczony" />
+        </columns>
+      </TableView>
+      <Label alignment="CENTER" layoutX="367.0" layoutY="14.0" prefHeight="69.0" prefWidth="166.0" text="SWS" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="Verdana Bold" size="24.0" />
+         </font>
+         <effect>
+            <DropShadow />
+         </effect>
+      </Label>
+      <TableView fx:id="tableCustomers" layoutX="200.0" layoutY="325.0" onMouseClicked="#getSelectedCustomer" prefHeight="225.0" prefWidth="500.0">
+         <columns>
+            <TableColumn fx:id="tableColumnCustomerID" prefWidth="140.0" text="ID" />
+            <TableColumn fx:id="tableColumnFirstName" minWidth="0.0" prefWidth="120.0" text="Imię" />
+            <TableColumn fx:id="tableColumnLastName" prefWidth="120.0" text="Nazwisko" />
+            <TableColumn fx:id="tableColumnNumber" prefWidth="120.0" text="Telefon" />
+         </columns>
+      </TableView>
+   </children>
+</AnchorPane>
